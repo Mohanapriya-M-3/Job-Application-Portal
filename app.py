@@ -236,5 +236,8 @@ def api_report_data():
     
 # ++++++++++++++++++++++++++++++++++++++ END OF REPORT PAGE +++++++++++++++++++++++++++++
 
-if __name__ == '_main_':
-    app.run(host='0.0.0.0', port=10000)  # You can use any port, or better:
+import os
+
+if _name_ == '_main_':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
