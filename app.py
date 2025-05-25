@@ -238,6 +238,6 @@ def api_report_data():
 
 import os
 
-if __name__ == '_main_':
-    port = int(os.environ.get('PORT', 5000))
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 10000))  # 10000 is fallback for local dev
     app.run(host='0.0.0.0', port=port)
